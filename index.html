@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="index.css">
+	<title>dragging</title>
 </head>
 <body>
+	<h2>Drag and Drop</h2>
+	<p>Drag the image back and forth between the two div elements.</p>
+
+	<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+		<img src="cat.png" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+	</div>
+
+	<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
     
+<script src="index.js" ></script>    
 </body>
 </html>
