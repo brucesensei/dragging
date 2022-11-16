@@ -1,17 +1,46 @@
+body {
+  text-align: center;
+}
 
-#div1, #div2 {
-    float: left;
-    width: 100px;
-    height: 35px;
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid black;
-  }
+p {
+  font-size: 3rem;
+}
 
-  #start {
-    width: 80%;
-    height: 35px;
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid black;
-  }
+.choice-box {
+  margin: auto;
+  width: 95%;
+  text-align: center;
+  border: 1px solid black;
+  height: 5rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 3rem;
+}
+
+.target-boxes {
+  display: inline-block;
+  text-align: center;
+  border: 1px solid black;
+  height: 5rem;
+  width: 230px;
+  margin: 15px 5px;
+  vertical-align: top;
+}
+
+span {
+  padding: 0 10px;
+  font-size: 3rem;
+}
+
+.correct {
+  background-color: lightblue;
+}
+
+.wrong {
+  background-color: orange;
+}
+
+.answer-container {
+  text-align: left;
+}
+

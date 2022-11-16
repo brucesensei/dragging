@@ -1,24 +1,14 @@
 <%- include("header") -%>
 
-<body>
-	<h3>Input a sentence to be scrambled and press submit.</h3>
+<body onload="formatQuestion()">
 
-	<form action="/" method="post">
-		<input type="text" name="userinput">
-		<button type="submit">submit</button>
-	</form>
+	<p>Number <span id="question-number"></span> of <span id="total"></span> :	Unscramble the sentence.</p>
+	<button onclick="checkAnswer()">Submit Answer</button>
+	<button onclick="showAnswer()">Show Answer</button>
+	<div class="choice-box"></div>
+	<div class="answer-container"></div>
+
+
+	<script src="logic.js" charset="utf-8"></script>
 </body>
 </html>
-
- 
-
-<!-- <h2>Drag and Drop</h2>
-<p>Drag the image back and forth between the two div elements.</p>
-
-<div id="start" ondrop="drop(event)" ondragover="allowDrop(event)">
-	<img src="cat.png" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
-</div>
-
-<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-
-<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div> -->
