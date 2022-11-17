@@ -4,6 +4,13 @@ body {
 
 p {
   font-size: 3rem;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+h4 {
+  margin-top: 10px;
+  margin-bottom: 0;
 }
 
 .choice-box {
@@ -11,10 +18,11 @@ p {
   width: 95%;
   text-align: center;
   border: 1px solid black;
-  height: 5rem;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  height: 4rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
   font-size: 3rem;
+  padding: 2px 0;
 }
 
 .target-boxes {
@@ -23,7 +31,7 @@ p {
   border: 1px solid black;
   height: 5rem;
   width: 230px;
-  margin: 15px 5px;
+  margin: 8px 5px;
   vertical-align: top;
 }
 
@@ -42,5 +50,14 @@ span {
 
 .answer-container {
   text-align: left;
+  margin: auto;
+  width: 95%;
 }
 
+#beginning {
+  text-align: left;
+}
+
+#end {
+  text-align: left;
+}
