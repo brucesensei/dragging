@@ -11,6 +11,11 @@ app.get('/', function(req, res) {
     res.render('index');
 });
 
+app.get('/quiz-form', function(req, res) {
+    res.render('quiz-form');
+});
+
+
 app.listen(3000, function() {
     console.log('server running on port 3000');
 });
