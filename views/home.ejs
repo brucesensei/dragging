@@ -1,0 +1,34 @@
+
+
+<%- include("partials/header") -%>
+
+<body>
+	<form action="/" method="post">
+		<div class="form-group">
+			<label>Title</label>
+			<input type="text" name="formTitle" class="form-control" aria-describedby="title">
+			<label>Example</label>
+			<textarea name="formExample" class="form-control" aria-describedby="example"></textarea>
+		</div>
+		<div class="form-group form-check">
+			<input type="checkbox" class="form-check-input" id="translateId" name="formTranslate" value="includeTranslation">
+			<label class="form-check-label" for="translatedId">Include Japanese translation</label>
+		</div>
+		<div class="form-group">
+			<label>Beginning</label>
+			<input type="text" name="formBeginning" class="form-control" aria-describedby="beginning">
+			<label>Middle</label>
+			<input type="text" name="formMiddle" class="form-control" aria-describedby="middle">
+			<label>End</label>
+			<input type="text" name="formEnd" class="form-control" aria-describedby="end">
+		</div><br>
+	<button class="btn btn-primary">Add another sentence</button>
+	<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" 
+crossorigin="anonymous"></script>
+<script src="logic.js" charset="utf-8"></script>
+</body>
+</html>
