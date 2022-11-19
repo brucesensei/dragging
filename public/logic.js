@@ -1,17 +1,17 @@
 var scram = {
-  title: "",
-  example: "",
-  motherTounge: "",
+  title: "Present Simple",
+  example: "There are three cats sitting on the bench. I sometimes walk to school. How many times do I have to tell you that I am not interested in this anymore.",
+  motherTounge: "includeTranslation",
   sentenceList: [
     {
-      beginning: "what do you",
-      middle: "want for your",
-      end: "birthday?",
+      beginning: "",
+      middle: "I usually eat beef curry at home.",
+      end: "",
   },
 {
-  beginning: "",
-  middle: "I usually eat beef curry at home.",
-  end: "",
+  beginning: "what do you",
+  middle: "want for your",
+  end: "birthday?",
 },
 {
   beginning: "I usually eat",
@@ -36,11 +36,20 @@ questionBox.addEventListener('dragenter', dragEnter);
 questionBox.addEventListener('dragover', dragOver);
 questionBox.addEventListener('drop', dropMe);
 
+if (scram.example !== "") {
+  scram.example = 'Example:  ' + scram.example;
+  document.querySelector(".example-container").classList.add("gray");
+}
+
+if (scram.motherTounge === "includeTranslation") {
+  document.getElementById('mother-tounge').innerHTML = 'how are you doing?';
+  //EN english JA papanese
+}
+
 document.getElementById('question-number').innerHTML = questionNumber;
 document.getElementById('total').innerHTML = scram.sentenceList.length;
 document.getElementById('title').innerHTML = scram.title;
 document.getElementById('example').innerHTML = scram.example;
-document.getElementById('mother-tounge').innerHTML = scram.motherTounge;
 //-----------------------------------------main logic----------------------------------------------
 
 function formatQuestion() {
@@ -72,7 +81,7 @@ function randomize(text) {
 
 function createDraggables(elements) {
   for (i = 0; i < elements.length; i++) {
-      const newSpan = document.createElement('span');
+      const newSpan = document.createElement('div');
       const newContent = document.createTextNode(elements[i]);
       newSpan.appendChild(newContent);
       newSpan.setAttribute('draggable', 'true');
@@ -97,9 +106,11 @@ function checkAnswer() {
     const showResult = document.querySelector('.choice-box');
     if (validate(text)) {
       showResult.classList.add('correct');
+      showResult.classList.remove('choice-box')
       showResult.innerHTML = 'CORRECT!';
       setTimeout( () => {
         showResult.classList.remove('correct');
+        showResult.classList.add('choice-box')
         showResult.innerHTML = '';
         removeNodes();
         questionNumber += 1;
@@ -112,9 +123,11 @@ function checkAnswer() {
       }, '1000')
     } else {
       showResult.classList.add('wrong');
+      showResult.classList.remove('choice-box')
       showResult.innerHTML = 'WRONG!';
       setTimeout( () => {
         showResult.classList.remove('wrong');
+        showResult.classList.add('choice-box')
         showResult.innerHTML = '';
         removeNodes();
         shuffledText = randomize(text);

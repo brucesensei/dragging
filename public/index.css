@@ -1,25 +1,31 @@
-
-p {
-  font-size: 3rem;
-  margin-top: 0;
-  margin-bottom: 10px;
+body {
+  margin: 0 10px;
 }
 
-h4 {
-  margin-top: 10px;
-  margin-bottom: 0;
+#title {
+  text-align: center;
+  margin: 10px 0;
 }
+
+.gray {
+  background-color: rgb(232, 232, 232);
+  border-radius: 2%;
+}
+
+#number-info {
+  font-size: 2rem;
+  text-align: center;
+}
+
 
 .choice-box {
-  margin: auto;
-  width: 95%;
+  border: 1px solid gray;
+  flex-wrap: wrap;
+  display: flex;
+  min-height: 5rem;
   text-align: center;
-  border: 1px solid black;
-  height: 4rem;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: auto;
   font-size: 3rem;
-  padding: 2px 0;
 }
 
 .target-boxes {
@@ -27,34 +33,43 @@ h4 {
   text-align: center;
   border: 1px solid black;
   height: 5rem;
-  width: 230px;
+  min-width: 80px;
+  max-width: fit-content;
   margin: 8px 5px;
   vertical-align: top;
+  border-radius: 20%;
 }
 
-span {
+.word {
   padding: 0 10px;
   font-size: 3rem;
+  display: inline;
 }
 
 .correct {
   background-color: lightblue;
+  text-align: center;
+  font-size: 3rem;
 }
 
 .wrong {
   background-color: orange;
+  text-align: center;
+  font-size: 3rem;
 }
 
 .answer-container {
   text-align: left;
   margin: auto;
-  width: 95%;
 }
 
 #beginning {
   text-align: left;
+  font-size: 2rem;
 }
 
 #end {
   text-align: left;
+  font-size: 2rem;
+  line-height: 0;
 }

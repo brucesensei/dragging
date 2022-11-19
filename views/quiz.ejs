@@ -1,16 +1,16 @@
 <%- include("partials/header") -%>
 
 <body onload="formatQuestion()">
-	<h1 id="title"></h1>
-	<div class="example-container"><h3 id="example"></h3></div>
-	<p>Unscramble <span id="question-number"></span> of <span id="total"></span> sentences.</p>
+	<h2 id="title"></h2>
+	<div class="example-container"><p id="example"></p></div>
+	<p id="number-info">Unscramble <span id="question-number"></span> of <span id="total"></span> sentences.</p>
 	<h4 id="mother-tounge"></h4>
 	<div class="choice-box"></div>
-	<h1 id="beginning"></h1>
+	<span id="beginning"></span>
 	<div class="answer-container"></div>
-	<h1 id="end"></h1>
-	<button onclick="checkAnswer()">Submit Answer</button>
-	<button onclick="showAnswer()">Show Answer</button>
+	<span id="end"></span><br>
+	<button class="btn btn-primary" onclick="checkAnswer()">Submit Answer</button>
+	<button class="btn btn-primary" onclick="showAnswer()">Show Answer</button>	
 	
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" 
