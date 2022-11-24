@@ -2,7 +2,71 @@
 
 <%- include("partials/header") -%>
 
+<<<<<<< HEAD
 <body>
+=======
+<body>	
+	
+<script>
+var questionNumber = 2
+
+function addFields() {
+	const newDiv = document.createElement('div');
+	newDiv.setAttribute('class', 'form-group')
+	const hr = document.createElement('hr');
+	newDiv.appendChild(hr)
+
+	const newh4 = document.createElement('h4');
+	const counter = document.createTextNode(questionNumber);
+	newh4.appendChild(counter);
+	newDiv.appendChild(newh4);
+
+	const label = document.createElement('label');
+	const newText = document.createTextNode('Beginning');
+	const beginningName = 'beginning' + questionNumber
+	label.appendChild(newText);
+	newDiv.appendChild(label);
+	const textField = document.createElement('input');
+	textField.setAttribute('name', beginningName)
+	textField.setAttribute('type', 'text');
+	textField.setAttribute('class', 'form-control');
+	textField.setAttribute('aria-describedby', 'beginning');
+	newDiv.appendChild(textField);
+
+	const labelM = document.createElement('label');
+	const newTextM = document.createTextNode('Middle');
+	const middleName = 'middle' + questionNumber
+	labelM.appendChild(newTextM);
+	newDiv.appendChild(labelM);
+	const textFieldM = document.createElement('input');
+	textFieldM.setAttribute('name', middleName)
+	textFieldM.setAttribute('type', 'text');
+	textFieldM.setAttribute('class', 'form-control');
+	textFieldM.setAttribute('aria-describedby', 'middle');
+	newDiv.appendChild(textFieldM);
+
+	const labelE = document.createElement('label');
+	const newTextE = document.createTextNode('End');
+	const endName = 'end' + questionNumber
+	labelE.appendChild(newTextE);
+	newDiv.appendChild(labelE);
+	const textFieldE = document.createElement('input');
+	textFieldE.setAttribute('name', endName)
+	textFieldE.setAttribute('type', 'text');
+	textFieldE.setAttribute('class', 'form-control');
+	textFieldE.setAttribute('aria-describedby', 'end');
+	newDiv.appendChild(textFieldE);
+
+	const parentElement = document.getElementById('add').parentNode;
+	const ref = document.getElementById('add');
+	parentElement.insertBefore(newDiv, ref);
+	questionNumber += 1;
+};
+</script>
+
+
+
+>>>>>>> addField
 	<form action="/" method="post" autocomplete="off">
 		<div class="form-group">
 			<label>Title</label>
@@ -15,20 +79,22 @@
 			<label class="form-check-label" for="translatedId">Include Japanese translation</label>
 		</div>
 		<div class="form-group">
+			<hr>
+			<h4>1</h4>	
 			<label>Beginning</label>
-			<input type="text" name="formBeginning" class="form-control" aria-describedby="beginning">
+			<input type="text" name="formBeginning1" class="form-control" aria-describedby="beginning">
 			<label>Middle</label>
-			<input type="text" name="formMiddle" class="form-control" aria-describedby="middle">
+			<input type="text" name="formMiddle1" class="form-control" aria-describedby="middle">
 			<label>End</label>
-			<input type="text" name="formEnd" class="form-control" aria-describedby="end">
-		</div><br>
-	<button class="btn btn-primary">Add another sentence</button>
-	<button type="submit" class="btn btn-primary">Submit</button>
-	</form>
+			<input type="text" name="formEnd1" class="form-control" aria-describedby="end">
+		</div>
+		<button type="submit" id="add" class="btn btn-primary">Submit</button>
+	</form><br>
+	<button class="btn btn-primary" onClick="addFields()">Add another sentence</button>
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" 
 integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" 
 crossorigin="anonymous"></script>
-<script src="logic.js" charset="utf-8"></script>
+
 </body>
 </html>
